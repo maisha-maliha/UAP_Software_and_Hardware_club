@@ -6,7 +6,7 @@
     --blue1:#0F52BA;
     --purple : #DC143C;
     --burgendy: #800020;
-    --nav_aniamtion_duartion:1.5s;
+    --nav_aniamtion_duartion:1s;
 }
 *{
     margin: 0;
@@ -55,14 +55,14 @@ p{
     display: grid;
     max-width: 800px;
     margin: 0 auto;
-    padding: 2vh 2vw;
+    padding: 1vh 2vw;
     grid-template-columns: 2fr 3fr;
     align-items: center;
     /* display: none; */
 }
 .mobile-view{
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 60px 2fr;
     align-items: center;
 }
 .logo{
@@ -72,13 +72,12 @@ p{
 .mobile-view h2{
     display: inline;
     color: white;
-    font-family: var(--pop);
-    font-size: 30px;
+    font-size: 40px;
     font-family: var(--vol);
 }
 .burger{
     display: none;
-    width: 45px;
+    width: 40px;
     justify-self: end;
     cursor: pointer;
 }
@@ -108,25 +107,35 @@ nav ul{
 }
 nav ul li{
     display: inline;
+    text-align: center;
+    padding: 10px;
     opacity: 0;
     float: left;
-    padding: 10px;
-    color: rgb(255, 255, 255);
     animation: seen;
     animation-fill-mode: forwards;
     animation-duration: 2s;
 }
-nav li:nth-child(1){
-    animation-delay: 0.5s;
-}
 nav li:nth-child(2){
-    animation-delay: 1s;
+    animation-delay: 0.2s;
 }
 nav li:nth-child(3){
-    animation-delay: 1.5s;
+    animation-delay: 0.6s;
 }
+
 nav li:nth-child(4){
+    animation-delay: 1s;
+}
+/* nav li:nth-child(4){
     animation-delay: 2s;
+} */
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    transition-duration: 0.3s;
+}nav ul li a:hover{
+    color: white;
+    font-weight: bolder;
+    font-size: 19px;
 }
 .navon{
     display: block;
@@ -139,7 +148,7 @@ nav li:nth-child(4){
         display: inline;
     }
     .mobile-view{
-        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-columns: 60px 2fr 50px;
     }
     nav{
         display: none;
@@ -153,8 +162,6 @@ nav li:nth-child(4){
     nav ul li{
         display: block;
         float: none;
-        font-size: 19px;
-        text-align: center;
         margin: 20px auto;
     }
     .mobile-view h2{
