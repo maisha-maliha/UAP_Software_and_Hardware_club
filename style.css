@@ -1,0 +1,112 @@
+:root{
+    --mon:'Montserrat', sans-serif;
+    --pop:'Poppins', sans-serif;
+    --vol:'Vollkorn', serif;
+    --blue: #191970;
+    --blue1:#0F52BA;
+    --purple : #DC143C;
+    --burgendy: #800020;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--mon);
+}
+
+.home-content{
+    width: 80%;
+    margin: 10px auto 50px;
+    max-width: 800px;
+}
+h1{
+    font-family: var(--pop);
+    color: var(--purple);
+    font-size: 50px;
+}
+p{
+    margin: 20px auto;
+}
+
+/* nabar styling */
+
+.navbar{
+    background-color: var(--blue);
+    width: 100%;
+    height: 50px;
+    position: sticky;
+    top: 0;
+}
+.nav-cover{
+    display: inline;
+    position: fixed;
+    width:200vw;
+    height: 200vh;
+    top: -200vh;
+    left:-200vw;
+    background-color: var(--blue);
+    border-radius: 0 100% 100% 100%;
+    z-index: -1;
+    /* animation-name: show; */
+    /* animation-duration: 3s; */
+    /* animation-iteration-count:infinite; */
+    /* animation-timing-function:linear; */
+}
+.nav-content{
+    display: grid;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    grid-template-columns: 1fr 3fr;
+    /* display: none; */
+}
+.logo{
+    display: inline;
+    width: 30px;
+}
+.burger{
+    display: none;
+    width: 45px;
+    justify-self: end;
+}
+.burger .line{
+    width: 30px;
+    margin: 5px;
+    height: 3px;
+    background-color: black;
+}
+nav{
+    display: inline;
+    right: 0;
+}
+nav ul{
+    display: inline;
+}
+nav ul li{
+    display: inline;
+    float: right;
+    padding: 10px;
+    color: white;
+}
+
+
+@media(max-width:600px){
+    .nav-content .burger{
+        display: inline;
+    }
+    .nav-content nav{
+        display: none;
+    }
+}
+
+@keyframes show {
+    100%{
+        top: 0vh;
+        left: 0vw;
+    }
+}
+@keyframes hide {
+    100%{
+        top: -200vh;
+        left: -200vw;
+    }
+}
