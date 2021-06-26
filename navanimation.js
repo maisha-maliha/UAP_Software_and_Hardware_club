@@ -8,5 +8,6 @@ burger.onclick = function(){
         active = false;
     } else{
         nav_cover.style.animationName = "hide";
+        active = true;
     }
 };
