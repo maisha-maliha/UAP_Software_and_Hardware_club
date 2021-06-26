@@ -163,6 +163,7 @@ nav ul li a{
         display: block;
         float: none;
         margin: 20px auto;
+        font-size: 25px;
     }
     .mobile-view h2{
         justify-self: center;
