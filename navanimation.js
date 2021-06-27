@@ -2,8 +2,10 @@ var burger = document.getElementsByClassName('burger')[0];
 var nav_cover = document.getElementsByClassName('nav-cover')[0];
 var nav = document.querySelector("nav");
 var active = true;
+console.log(nav_cover);
 
 burger.addEventListener("click", navopen);
+
 function navopen(){
     console.log(nav_cover);
     if(active){
