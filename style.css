@@ -8,11 +8,32 @@
     --burgendy: #800020;
     --nav_aniamtion_duartion:1s;
     --content-width: 90%;
+    --content-width1:1200px;
+    --content-width2:1000px;
 }
 *{
     margin: 0;
     padding: 0;
     font-family: var(--mon);
+}
+.fixed{
+    opacity:0.2;
+    position: fixed;
+    z-index: -12;
+    top: 25vh;
+    display: inline;
+    animation-name: gearAnimation ;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.animation1{
+    height: 600px;
+    left: -150px;
+}
+.animation2{
+    height: 300px;
+    left: -50px;
 }
  /* 
  ============================
@@ -24,7 +45,7 @@ IMAGE SLIDER STYE stye
 .imageslider{
     position: relative;
     width: 90%;
-    max-width: 1000px;
+    max-width: var(--content-width1);
     height: 600px;
     margin: 20px auto;
 }
@@ -55,6 +76,7 @@ IMAGE SLIDER STYE stye
       height: 600px;
   }
   .box {
+      display: none;
     width: 150px;
     margin: 20px auto;
   }
@@ -62,7 +84,7 @@ IMAGE SLIDER STYE stye
     display: inline-block;
     width: 20px;
     height: 20px;
-    border: solid 2px aquamarine;
+    border: solid 2px var(--blue1);
     border-radius: 50%;
   }
   
@@ -76,7 +98,7 @@ IMAGE SLIDER STYE stye
 
 
 .loading{
-    /* display: none; */
+    display: none;
     background-color: var(--blue);
     width: 100%;
     height: 100%;
@@ -110,29 +132,6 @@ IMAGE SLIDER STYE stye
     width: 50vw;
     max-width: 500px;
     z-index: -1;
-}
-
- /* 
- ============================
-
-content stye  
- 
- ============================
- */
-
-h1{
-    font-family: var(--vol);
-    color: var(--purple);
-    font-size: 50px;
-    line-height: 50px;
-}
-p{
-    margin: 20px auto;
-}
-.home-content{
-    width: var(--content-width);
-    margin: 10px auto;
-    max-width: 800px;
 }
 
  /* 
@@ -216,6 +215,8 @@ nav{
     right: 0;
     justify-self: end;
     align-self: center;
+    font-family: var(--vol);
+    /* font-weight: 900; */
 }
 nav ul{
     display: inline;
@@ -223,7 +224,8 @@ nav ul{
 nav ul li{
     display: inline;
     text-align: center;
-    padding: 13px;
+    padding: 13px 5px;
+    margin: 0 5px;
     opacity: 0;
     float: left;
     animation: seen;
@@ -245,6 +247,7 @@ nav li:nth-child(5){
     animation-delay: 1.5s;
     border: 1px solid white;
     padding: 12px;
+    width: 100px;
 }
 nav ul li a{
     color: white;
@@ -253,12 +256,91 @@ nav ul li a{
 nav ul li:hover{
     background-color: var(--blue1);
     color: rgb(143, 143, 143);
-    border-radius: 15px;
+    /* border-radius: 15px; */
 }
 .navon{
     display: block;
 }
 
+
+ /* 
+ ============================
+
+content stye  
+ 
+ ============================
+ */
+.title{
+    position: relative;
+}
+.title img{
+    display: inline;
+    position: sticky;
+    top: 0;
+    left: -25vw;
+    width: 300px;
+    opacity: 0.2;
+}
+h1{
+    font-family: var(--vol);
+    color: var(--purple);
+    font-size: 130px;
+    line-height: 150px;
+    width: 90%;
+    max-width: var(--content-width2);
+    margin: 20px auto;
+    /* text-align: center; */
+}
+h1 span{
+    display: block;
+    font-size: 22px;
+    line-height: 45px;
+    /* font-family: var(--pop); */
+}
+.club-intro h3, .convener h3{
+    font-family: var(--pop);
+    font-weight: 700;
+    color: var(--blue1);
+    font-size: 100px;
+    line-height: 80px;
+    padding: 0 30px;
+}
+.margin{
+    margin: 50px auto 100px;
+}
+.club-intro h3 span,.convener h3 span{
+    font-size: 22px;
+    display: block;
+    line-height: 25px;
+}
+p{
+    margin: 20px auto;
+}
+.bg-clr{
+    width: 100%;
+    padding: 1px;
+    background-color: var(--purple);
+}
+.club-intro, .convener{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: var(--content-width);
+    max-width: var(--content-width2);
+}
+.club-intro p{
+    color: white;
+}
+.club-intro p, .convener-speech p{
+    padding: 10px 50px;
+}
+.convener-img{
+    width: 100%;
+    height: 500px;
+}
+.convener-img img{
+    height: 100%;
+    object-fit: cover;
+}
  /* 
  ============================
 
@@ -292,6 +374,10 @@ ALL MEDIA stye
  */
 
 @media(max-width:770px){
+    h1{
+        font-size: 60px;
+        line-height: 60px;
+    }
     .nav-content{
         grid-template-columns: 1fr;
     }
@@ -330,6 +416,24 @@ ALL MEDIA stye
     }
     .img img{
         object-fit: cover;
+    }
+    .club-intro, .convener{
+        grid-template-columns: 1fr;
+    }
+    .convener-img{
+        width: 200px;
+        height: 300px;
+    }
+    .convener-img img{
+        height: 100%;
+        object-fit: cover;
+    }
+    .club-intro p, .convener-speech p{
+        padding: 0;
+    }
+    .club-intro h3, .convener h3{
+        font-size: 40px;
+        line-height: 30px;
     }
 }
 
