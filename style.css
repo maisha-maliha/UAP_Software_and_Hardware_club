@@ -5,11 +5,14 @@
     --blue: #191970;
     --blue1:#0047AB;
     --purple : #DC143C;
+    --grey:rgb(80, 80, 80);
     --nav_aniamtion_duartion:1s;
     --content-width: 85%;
     --content-width1:1200px;
     --content-width2:1000px;
     --margin : 50px auto 100px;
+    --h4: 40px;
+    --h3:80px;
 }
 
   /* 
@@ -139,7 +142,7 @@ p{
     background-color: var(--blue);
     width: 100%;
     height: 11vh;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 5;
 }
@@ -266,16 +269,43 @@ nav ul li:hover{
 h1{
     font-family: var(--vol);
     color: var(--purple);
-    font-size: 130px;
-    line-height: 150px;
+    font-size: 110px;
+    line-height: 110px;
     width: 90%;
     max-width: var(--content-width2);
-    margin: var(--margin);
+    margin: 50px auto;
 }
 h1 span{
     display: block;
     font-size: 22px;
     line-height: 45px;
+}
+
+ /* 
+ =======================================================
+
+*************   CLUB-INTO STYLING   ********************
+
+ =======================================================
+ */
+.club-intro{
+    width: var(--content-width);
+    max-width: var(--content-width2);
+    margin: var(--margin);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.club-intro >div{
+    padding: 10px 20px;
+}
+.club-intro h3{
+    color: var(--blue1);
+    font-size: 30px;
+    font-family: var(--pop);
+}
+.club-intro p{
+    font-size: 18px;
+    color: var(--grey);
 }
 
  /* 
@@ -295,11 +325,11 @@ h1 span{
  }
  .club-para, .convener-para{
      display: grid;
-     grid-template-columns:100px 3fr 100px;
+     grid-template-columns:60px 3fr 60px;
  }
  .club-para img{
-     width: 80px;
-     height: 80px;
+     width: 60px;
+     height: 60px;
      align-self: center;
     justify-self: center;
  }
@@ -334,7 +364,7 @@ h1 span{
     font-family: var(--pop);
     font-weight: 700;
     color: var(--blue1);
-    font-size: 100px;
+    font-size: var(--h3);
     line-height: 90px;
 }
 .club-moto h3{
@@ -364,14 +394,16 @@ h1 span{
     font-style: italic;
     font-size: 18px;
     padding: 30px 0px;
-    color: rgb(80, 80, 80);
+    color: var(--grey);
 }
 .convener-img{
     width: 350px;
     height: 500px;
 }
 .convener-img img{
+    width: 100%;
     height: 100%;
+    object-position: revert;
     object-fit: cover;
 }
 
@@ -439,6 +471,9 @@ footer{
     color:var(--purple);
     font-size: 18px;
 }
+.useful{
+    margin-top: 20px;
+}
 .dev img{
     width: 100px;
     height: 100px;
@@ -456,7 +491,26 @@ footer{
 
  =======================================================
  */
-
+ @media(max-width:910px){
+    .convener h3{
+        font-size: var(--h4);
+    }
+    .convener-para{
+        grid-template-columns: 1fr;
+    }
+    .quotation{
+        line-height: 100px;
+    }
+    #contact > div {
+        padding: 20px 0;
+    }
+    .club-intro{
+        grid-template-columns: 1fr;
+    }
+    .club-intro >div{
+        padding: 20px 0;
+    }
+ }
 @media(max-width:770px){
     h1{
         font-size: 60px;
@@ -482,7 +536,6 @@ footer{
     }
     nav ul li{
         display: block;
-        float: none;
         margin: 20px auto;
         font-size: 25px;
     }
@@ -501,7 +554,7 @@ footer{
     .img img{
         object-fit: cover;
     }
-    .club-moto, .convener, #contact, .convener-para, .club-para{
+    .club-moto, .convener, #contact, .club-para{
         grid-template-columns: 1fr;
     }
     .convener-img{
@@ -519,7 +572,7 @@ footer{
         padding: 0 0 20px;
     }
     .club-moto h3, .convener h3{
-        font-size: 50px;
+        font-size: var(--h4);
         line-height: 50px;
         margin: 0 0 20px;
     }
