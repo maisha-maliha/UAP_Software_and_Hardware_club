@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- style  -->
-        <link rel="stylesheet" href="resources/css/commitee.css">
-        <link rel="stylesheet" href="resources/css/nav and footer.css">
+    <!-- css style -->
+    <link rel="stylesheet" href="resources/css/nav and footer.css">
+    <link rel="stylesheet" href="resources/css/gallary.css">
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&family=Poppins:wght@700&family=Vollkorn:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran&display=swap" rel="stylesheet">
     
-        <!-- fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&family=Poppins:wght@700&family=Vollkorn:wght@900&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Catamaran&display=swap" rel="stylesheet">
-        
-    <title>SnH Committee</title>
+    <title>SnH Gallary</title>
 </head>
 <body>
     <div class="navbar">
@@ -33,7 +33,15 @@
               <ul>
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="events.html">EVENTS</a></li>
-                <li><a href="committee.html">COMMITTEE</a></li>
+                <li>
+                  <div class="dropdown">
+                    <button class="dropbtn">COMMITTEE</button>
+                    <div class="dropdown-content">
+                      <a href="committee.html">Current Committee</a>
+                      <a href="prev-committee.html">Former Committee</a>
+                    </div>
+                  </div>
+                </li>
                 <li><a href="#contact">CONTACT</a></li>
                 <li><a href="components.html">COMPONENTS</a></li>
                 <li><a href="gallary.html">GALLARY</a></li>
@@ -42,12 +50,33 @@
         </div>
     </div>
 
-    <section class="members">
-        <div class="convener">
 
+    <div class="gallary">
+      <h3><span>Available</span> Components</h3>
+      <div class="images">
+        <div class="img">
+          <img src="resources/images/pic1.jpg" alt="">
         </div>
-
-    </section>
+        <div class="img">
+          <img src="resources/images/pic1.jpg" alt="">
+        </div>
+        <div class="img">
+          <img src="resources/images/pic1.jpg" alt="">
+        </div>
+        <div class="img">
+          <img src="resources/images/pic1.jpg" alt="">
+        </div>
+        <div class="img">
+          <img src="resources/images/pic1.jpg" alt="">
+        </div>
+        <div class="img">
+          <img src="resources/images/pic1.jpg" alt="">
+        </div>
+        <div class="img">
+          <img src="resources/images/pic1.jpg" alt="">
+        </div>
+      </div>
+    </div>
 
 
     <footer>
@@ -103,10 +132,6 @@
         </div>
     </footer>
 
-
     <script src="resources/js/navanimation.js"></script>
-
-
 </body>
 </html>
-

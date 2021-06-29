@@ -6,7 +6,7 @@ html, body {
   }
   
   .slider {
-    margin: 0 auto;
+    margin: 11vh auto;
     height: 700px;
     width: 100%;
     /* max-width: 2000px; */
@@ -140,6 +140,9 @@ html, body {
     }
     .next_btn {
       right: 50px;
+    }
+    .slider{
+      margin: calc(11vh + 30px) auto 50px;
     }
   }
 
