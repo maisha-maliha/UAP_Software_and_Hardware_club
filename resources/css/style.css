@@ -1,0 +1,374 @@
+:root{
+    --mon:'Montserrat', sans-serif;
+    --pop:'Poppins', sans-serif;
+    --vol:'Vollkorn', serif;
+    --blue: #191970;
+    --blue1:#0047AB;
+    --purple : #DC143C;
+    --grey:rgb(80, 80, 80);
+    --nav_aniamtion_duartion:1s;
+    --content-width: 85%;
+    --content-width1:1200px;
+    --content-width2:1000px;
+    --margin : 50px auto 100px;
+    --h4: 40px;
+    --h3:70px;
+    --fontsize:18px;
+}
+
+  /* 
+ =======================================================
+
+*************   GLOABAL STYLING   **********************
+
+ =======================================================
+ */
+
+p{
+    word-spacing: 4px;
+}
+ /* 
+ =======================================================
+
+*************   LOADING STYLING   **********************
+
+ =======================================================
+ */
+
+
+ .loading{
+    display: none;
+    background-color: var(--blue);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 10;
+    animation-name: unseen;
+    animation-delay: 2s;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    overflow: hidden;
+}
+.loading img{
+    position: relative;
+    top: 5vh;
+    animation-duration: 2.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+.loading img:nth-child(1){
+    animation-name: gearAnimation;
+    left: 25vw;
+    width: 30vw;
+    max-width: 300px;
+}
+.loading img:nth-child(2){
+    animation-name: gearAnimation;
+    left: 10vw;
+    width: 50vw;
+    max-width: 500px;
+    z-index: -1;
+}
+
+ /* 
+ =======================================================
+
+*************   TITLE STYLING   **********************
+
+ =======================================================
+ */
+
+h1{
+    font-family: var(--vol);
+    color: var(--purple);
+    font-size: 110px;
+    line-height: 110px;
+    width: 90%;
+    max-width: var(--content-width2);
+    margin: 50px auto;
+}
+h1 span{
+    display: block;
+    font-size: 22px;
+    line-height: 45px;
+}
+
+ /* 
+ =======================================================
+
+*************   CLUB-INTO STYLING   ********************
+
+ =======================================================
+ */
+.club-intro{
+    width: var(--content-width);
+    max-width: var(--content-width2);
+    margin: var(--margin);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.club-intro >div{
+    padding: 10px 20px;
+}
+.club-intro h3{
+    color: var(--blue1);
+    font-size: 30px;
+    font-family: var(--pop);
+}
+.club-intro p{
+    font-size: var(--fontsize);
+    color: var(--grey);
+}
+
+ /* 
+ =======================================================
+
+***********   CLUB AND CONVENER STYLING   **************
+
+========================================================
+ */
+ .quotation{
+    font-family: 'Catamaran', sans-serif;
+    font-size: 120px;
+    display: block;
+    align-self: center;
+    justify-self: center;
+    color: var(--purple);
+ }
+ .club-para, .convener-para{
+     display: grid;
+     grid-template-columns:60px 3fr 60px;
+ }
+ .club-para img{
+     width: 60px;
+     height: 60px;
+     align-self: center;
+    justify-self: center;
+ }
+ .club-para img:nth-last-of-type(1){
+     animation-name: gearAnimation;
+     animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+ }
+ .club-para img:nth-last-of-type(2){
+    animation-name: engineer;
+    animation-duration: 1.5s;
+   animation-iteration-count: infinite;
+   animation-timing-function: linear;
+   animation-fill-mode: forwards;
+}
+ .bg-clr{
+    overflow: hidden;
+    width: 100%;
+    background-color: rgb(235, 235, 235);
+    margin: var(--margin);
+}
+.club-moto, .convener, .up-coming-event{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: var(--content-width);
+    max-width: var(--content-width2);
+    margin: var(--margin);
+}
+.club-moto h3, .convener h3, .up-coming-event h3{
+    font-family: var(--pop);
+    font-weight: 700;
+    color: var(--blue1);
+    font-size: var(--h3);
+    line-height: 90px;
+}
+.club-moto h3{
+    align-self: center;
+}
+.club-moto h3 span,.convener h3 span, .up-coming-event h3 span{
+    font-size: 22px;
+    display: block;
+    line-height: 25px;
+}
+.club-moto p{
+    color: var(--purple);
+    padding: 10px 30px;
+    font-size: var(--fontsize);
+}
+.convener-speech{
+    padding: 0 30px;
+}
+.convener-speech a{
+    color: var(--purple);
+    font-weight: 900;
+    font-size: 22px;
+    padding-left: 60px;
+}
+.convener-speech p{
+    font-style: italic;
+    font-size: var(--fontsize);
+    padding: 30px 0px;
+    color: var(--grey);
+}
+.convener-img{
+    width: 350px;
+    height: 500px;
+    align-self: center;
+}
+.convener-img img{
+    width: 100%;
+    height: 100%;
+    object-position: revert;
+    object-fit: cover;
+}
+
+
+/* 
+ =======================================================
+
+**************   EVENT STYLING   ***********************
+
+ =======================================================
+ */
+
+.event-posts{
+    padding-left: 20px;
+}
+.event-post{
+    padding-bottom: 20px;
+}
+.event-post h4{
+    padding: 0 0 10px;
+    font-size: 20px;
+    color: var(--purple);
+}
+.date, .time{
+    display: block;
+    padding: 5px 0;
+    font-size: 15px;
+}
+
+/* 
+ =======================================================
+
+**************   video STYLING   ***********************
+
+ =======================================================
+ */
+
+.university-video {
+    width: var(--content-width);
+    max-width: var(--content-width1);
+    margin: var(--margin);
+    height: 800px;
+}
+.university-video h3{
+    font-size: var(--h3);
+    font-family: var(--pop);
+    line-height: 60px;
+    color: var(--blue1);
+    /* text-align: center; */
+    margin: 20px 0;
+}
+iframe{
+    height: 90%;
+    width: 100%;
+}
+
+ /* 
+ =======================================================
+
+*************   ALL MEDIA STYLING   ********************
+
+ =======================================================
+ */
+ @media(max-width:910px){
+    .convener h3,.university-video h3, .up-coming-event h3, .club-moto h3{
+        font-size: var(--h4);
+        line-height: var(--h4);
+        margin: 0 0 20px;
+    }
+    .convener-para{
+        grid-template-columns: 1fr;
+    }
+    .quotation{
+        line-height: 100px;
+    }
+
+    .club-intro{
+        grid-template-columns: 1fr;
+    }
+    .club-intro >div{
+        padding: 20px 0;
+    }
+    .university-video{
+        height: 400px;
+     }
+     iframe{
+        width: 100%;
+        height: 400pxs;
+     }
+    .up-coming-event{
+        grid-template-columns: 1fr;
+    }
+    .event-posts{
+        padding-left: 0;
+    }
+ }
+@media(max-width:770px){
+    h1{
+        font-size: 60px;
+        line-height: 60px;
+    }
+
+    .loading img {
+        top: 35vh;
+    }
+    .imageslider{
+        height: 400px;
+    }
+    .container{
+        width: 100%;
+    }
+    .img img{
+        object-fit: cover;
+    }
+    .club-moto, .convener, .club-para{
+        grid-template-columns: 1fr;
+    }
+    .convener-img{
+        width: 100%;
+        height: 450px;
+    }
+    .convener-img img{
+        height: 100%;
+        object-fit: cover;
+    }
+    .club-moto p, .convener-speech{
+        padding: 20px 0;
+    }
+    .convener-speech p{
+        padding: 0 0 20px;
+    }
+    .quotation{
+        height: 100px;
+    }
+}
+
+ /* 
+ =======================================================
+
+*************   ANIMATION KEYFRAMAES STYLING   *********
+
+ =======================================================
+ */
+
+@keyframes engineer{
+    0%{
+        transform: rotate(0deg) ;
+}
+    50%{
+        transform: rotate(30deg);
+    }
+    100%{
+        transform: rotate(0deg) ;
+    }
+}
