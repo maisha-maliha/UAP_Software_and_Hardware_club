@@ -145,5 +145,3 @@ box[3].addEventListener('click',()=>{
 
 intervalManager(true);
 
-
-
