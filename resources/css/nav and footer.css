@@ -7,7 +7,7 @@
     --purple : #DC143C;
     --grey:rgb(80, 80, 80);
     --nav_aniamtion_duartion:1s;
-    --content-width: 85%;
+    --content-width: 90%;
     --content-width1:1200px;
     --content-width2:1000px;
     --margin : 50px auto 100px;
@@ -15,12 +15,12 @@
     --h2:25px;
     --h3:70px;
     --h4: 30px;
-    --mob-h1: 60px;
+    --mob-h1: 55px;
     --mob-h2:25px;
     --mob-h3:40px;
-    --mob-h4: 22px;
+    --mob-h4: 25px;
     --fontsize:16px;
-    --fontsize2:18px;
+    --fontsize2:20px;
     --top-margin:100px;
 }
 
@@ -49,7 +49,7 @@
  */
 
  .navbar{
-    background-color: var(--blue);
+    background-color: var(--blue1);
     width: 100%;
     height: var(--top-margin);
     position: fixed;
@@ -63,7 +63,7 @@
     height: 200vh;
     top: -200vh;
     left:-200vw;
-    background-color: var(--purple);
+    background-color: var(--blue1);
     border-radius: 0 100% 100% 100%;
     z-index: -1;
     animation-duration: var(--nav_aniamtion_duartion);
@@ -82,7 +82,7 @@
 }
 .mobile-view{
     display: grid;
-    grid-template-columns: 60px 2fr;
+    grid-template-columns: 70px 2fr;
     align-items: center;
 }
 .logo{
@@ -93,7 +93,7 @@
     display: inline;
     color: white;
     font-size: var(--h2);
-    font-family: var(--vol);
+    font-family: var(--pop);
 }
 .burger{
     display: none;
@@ -327,7 +327,7 @@ nav ul li:hover{
         display: inline;
     }
     .mobile-view{
-        grid-template-columns: 60px 2fr 50px;
+        grid-template-columns: 70px 2fr 50px;
         margin: 15px 0;
     }
     nav{
@@ -342,7 +342,7 @@ nav ul li:hover{
     nav ul li{
         display: block;
         margin: 25px auto;
-        font-size: 25px;
+        font-size: var(--fontsize2);
     }
     .mobile-view h2{
         justify-self: center;
