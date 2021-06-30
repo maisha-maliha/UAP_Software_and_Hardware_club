@@ -1,5 +1,5 @@
 .home-slide{
-  margin-top: 100px;
+  margin-top: var(--top-margin);
 }
 .img-slide-show{
   position: relative;

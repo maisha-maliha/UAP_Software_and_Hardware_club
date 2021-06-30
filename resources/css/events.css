@@ -1,6 +1,6 @@
 .notice{
     width: var(--content-width);
-    margin: calc(100px + 40px) auto 50px;
+    margin: calc(var(--top-margin) + 40px) auto 50px;
     max-width: var(--content-width2);
 }
 .notice h3{
