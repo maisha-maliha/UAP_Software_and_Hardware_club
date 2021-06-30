@@ -1,20 +1,3 @@
-:root{
-    --mon:'Montserrat', sans-serif;
-    --pop:'Poppins', sans-serif;
-    --vol:'Vollkorn', serif;
-    --blue: #191970;
-    --blue1:#0047AB;
-    --purple : #DC143C;
-    --grey:rgb(80, 80, 80);
-    --nav_aniamtion_duartion:1s;
-    --content-width: 85%;
-    --content-width1:1200px;
-    --content-width2:1000px;
-    --margin : 50px auto 100px;
-    --h4: 40px;
-    --h3:70px;
-    --fontsize:18px;
-}
 
   /* 
  =======================================================
@@ -25,7 +8,7 @@
  */
 
 p{
-    word-spacing: 4px;
+    line-height: 25px;
 }
  /* 
  =======================================================
@@ -42,7 +25,7 @@ p{
     width: 100%;
     height: 100%;
     position: fixed;
-    z-index: 10;
+    z-index: 50;
     animation-name: unseen;
     animation-delay: 2s;
     animation-duration: 1s;
@@ -82,15 +65,15 @@ p{
 h1{
     font-family: var(--vol);
     color: var(--purple);
-    font-size: 110px;
-    line-height: 110px;
+    font-size: var(--h1);
+    line-height: var(--h1);
     width: 90%;
     max-width: var(--content-width2);
     margin: 50px auto;
 }
 h1 span{
     display: block;
-    font-size: 22px;
+    font-size: var(--mob-h4);
     line-height: 45px;
 }
 
@@ -111,9 +94,9 @@ h1 span{
 .club-intro >div{
     padding: 10px 20px;
 }
-.club-intro h3{
+.club-intro h4{
     color: var(--blue1);
-    font-size: 30px;
+    font-size: var(--h4);
     font-family: var(--pop);
 }
 .club-intro p{
@@ -184,7 +167,7 @@ h1 span{
     align-self: center;
 }
 .club-moto h3 span,.convener h3 span, .up-coming-event h3 span{
-    font-size: 22px;
+    font-size: var(--mob-h4);
     display: block;
     line-height: 25px;
 }
@@ -203,7 +186,6 @@ h1 span{
     padding-left: 60px;
 }
 .convener-speech p{
-    font-style: italic;
     font-size: var(--fontsize);
     padding: 30px 0px;
     color: var(--grey);
@@ -237,8 +219,9 @@ h1 span{
 }
 .event-post h4{
     padding: 0 0 10px;
-    font-size: 20px;
+    font-size: var(--mob-h4);
     color: var(--purple);
+    font-family: var(--pop);
 }
 .date, .time{
     display: block;
@@ -280,10 +263,10 @@ iframe{
 
  =======================================================
  */
- @media(max-width:910px){
+ @media(max-width:1100px){
     .convener h3,.university-video h3, .up-coming-event h3, .club-moto h3{
-        font-size: var(--h4);
-        line-height: var(--h4);
+        font-size: var(--mob-h3);
+        line-height: var(--mob-h3);
         margin: 0 0 20px;
     }
     .convener-para{
@@ -299,6 +282,9 @@ iframe{
     .club-intro >div{
         padding: 20px 0;
     }
+    .club-intro h4{
+        font-size: var(--mob-h4);
+    }
     .university-video{
         height: 400px;
      }
@@ -312,11 +298,10 @@ iframe{
     .event-posts{
         padding-left: 0;
     }
- }
-@media(max-width:770px){
+
     h1{
-        font-size: 60px;
-        line-height: 60px;
+        font-size: var(--mob-h1);
+        line-height: var(--mob-h1);
     }
 
     .loading img {

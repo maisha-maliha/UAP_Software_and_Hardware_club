@@ -1,89 +1,149 @@
-$('.slider').each(function() {
-  var $this = $(this);
-  var $group = $this.find('.slide_group');
-  var $slides = $this.find('.slide');
-  var bulletArray = [];
-  var currentIndex = 0;
-  var timeout;
-  
-  function move(newIndex) {
-    var animateLeft, slideLeft;
-    
-    advance();
-    
-    if ($group.is(':animated') || currentIndex === newIndex) {
-      return;
-    }
-    
-    bulletArray[currentIndex].removeClass('active');
-    bulletArray[newIndex].addClass('active');
-    
-    if (newIndex > currentIndex) {
-      slideLeft = '100%';
-      animateLeft = '-100%';
-    } else {
-      slideLeft = '-100%';
-      animateLeft = '100%';
-    }
-    
-    $slides.eq(newIndex).css({
-      display: 'block',
-      left: slideLeft
+var slide = document.querySelectorAll('.img-slide');
+var box = document.querySelectorAll('.box div');
+var rbtn = document.querySelector('.right-btn');
+var lbtn = document.querySelector('.left-btn');
+const p = slide.length;
+var currentslide = 0, flag = true;
+
+rbtn.addEventListener('click', next);
+lbtn.addEventListener('click', previous);
+
+
+function intervalManager(flag) {
+    if(flag)
+      intervalID =  setInterval(next,6000);
+    else
+      clearInterval(intervalID);
+}
+function next() {
+    intervalManager(false);
+    slide.forEach(element => {
+        if(element!=slide[currentslide]){
+            element.style = 'left:100%;z-index:1'
+        }
     });
-    $group.animate({
-      left: animateLeft
-    }, function() {
-      $slides.eq(currentIndex).css({
-        display: 'none'
-      });
-      $slides.eq(newIndex).css({
-        left: 0
-      });
-      $group.css({
-        left: 0
-      });
-      currentIndex = newIndex;
+    box.forEach(element => {
+        element.style = 'background-color:white'
     });
+    if(currentslide===(p-1)){
+        slide[currentslide].style = 'left:-100%;z-index:1';
+        currentslide = 0;
+        slide[currentslide].style = 'left:0;z-index:3';
+    } else{
+        slide[currentslide].style = 'left:-100%;z-index:1';
+        slide[currentslide+1].style = 'left:0;z-index:3';
+        currentslide++;
+        if(currentslide==(p-1)){
+            slide[0].style = 'left:100%;z-index:1'
+        }
+    }
+    box[currentslide].style = 'background-color:#DC143C';
+    intervalManager(true);
   }
-  
-  function advance() {
-    clearTimeout(timeout);
-    timeout = setTimeout(function() {
-      if (currentIndex < ($slides.length - 1)) {
-        move(currentIndex + 1);
-      } else {
-        move(0);
-      }
-    }, 4000);
+  function previous() {
+    intervalManager(false);
+    slide.forEach(element => {
+        if(element!=slide[currentslide]){
+            element.style = 'left:-100%;z-index:1'
+        }
+    });
+    box.forEach(element => {
+        element.style = 'background-color:white'
+    });
+    if(currentslide===0){
+        slide[currentslide].style = 'left:100%;z-index:1';
+        slide[p-1].style = 'left:0;z-index:3';
+        currentslide = p-1;
+    } else{
+        slide[currentslide].style = 'left:100%;z-index:1';
+        slide[currentslide-1].style = 'left:0;z-index:3';
+        currentslide--;
+    }
+    console.log(currentslide);
+    box[currentslide].style = 'background-color:#DC143C';
+    intervalManager(true);
   }
-  
-  $('.next_btn').on('click', function() {
-    if (currentIndex < ($slides.length - 1)) {
-      move(currentIndex + 1);
-    } else {
-      move(0);
+
+slide.forEach(element => {
+    if(element!=slide[currentslide]){
+        element.style = 'left:100%;z-index:1'
     }
-  });
-  
-  $('.previous_btn').on('click', function() {
-    if (currentIndex !== 0) {
-      move(currentIndex - 1);
-    } else {
-      move(3);
-    }
-  });
-  
-  $.each($slides, function(index) {
-    var $button = $('<a class="slide_btn">&bull;</a>');
-    
-    if (index === currentIndex) {
-      $button.addClass('active');
-    }
-    $button.on('click', function() {
-      move(index);
-    }).appendTo('.slide_buttons');
-    bulletArray.push($button);
-  });
-  
-  advance();
 });
+
+
+box[0].addEventListener('click',()=>{
+    intervalManager(false);
+    box.forEach(element => {
+        element.style = 'background-color:white'
+    });
+    console.log(slide[0].style.left=='100%');
+        if(slide[0].style.left=='100%'){
+            slide[currentslide].style = 'left:-100%;z-index:1';
+            slide[0].style = 'left:0;z-index:3';
+            currentslide = 0;
+        } else if(slide[0].style.left=='-100%'){
+            slide[currentslide].style = 'left:100%;z-index:1';
+            slide[0].style = 'left:0;z-index:3';
+            currentslide = 0;
+        }
+        box[currentslide].style = 'background-color:#DC143C';
+        intervalManager(true);
+});
+box[1].addEventListener('click',()=>{
+    intervalManager(false);
+    box.forEach(element => {
+        element.style = 'background-color:white'
+    });
+    console.log(slide[1].style.left=='100%');
+        if(slide[1].style.left=='100%'){
+            slide[currentslide].style = 'left:-100%;z-index:1';
+            slide[1].style = 'left:0;z-index:3';
+            currentslide = 1;
+        } else if(slide[1].style.left=='-100%'){
+            slide[currentslide].style = 'left:100%;z-index:1';
+            slide[1].style = 'left:0;z-index:3';
+            currentslide = 1;
+        }
+        box[currentslide].style = 'background-color:#DC143C';
+        intervalManager(true);
+});
+box[2].addEventListener('click',()=>{
+    intervalManager(false);
+    box.forEach(element => {
+        element.style = 'background-color:white'
+    });
+        if(slide[2].style.left=='100%'){
+            slide[currentslide].style = 'left:-100%;z-index:1';
+            slide[2].style = 'left:0;z-index:3';
+            currentslide = 2;
+        } else if(slide[2].style.left=='-100%'){
+            slide[currentslide].style = 'left:100%;z-index:1';
+            slide[2].style = 'left:0;z-index:3';
+            currentslide = 2;
+        }
+        box[currentslide].style = 'background-color:#DC143C';
+        intervalManager(true);
+});
+box[3].addEventListener('click',()=>{
+    intervalManager(false);
+    box.forEach(element => {
+        element.style = 'background-color:white'
+    });
+        if(slide[3].style.left=='100%'){
+            slide[currentslide].style = 'left:-100%;z-index:1';
+            slide[3].style = 'left:0;z-index:3';
+            currentslide = 3;
+        } else if(slide[3].style.left=='-100%'){
+            slide[currentslide].style = 'left:100%;z-index:1';
+            slide[3].style = 'left:0;z-index:3';
+            currentslide = 3;
+        }
+        box[currentslide].style = 'background-color:#DC143C';
+        intervalManager(true);
+});
+
+
+intervalManager(true);
+
+
+
