@@ -11,7 +11,7 @@ lbtn.addEventListener('click', previous);
 
 function intervalManager(flag) {
     if(flag)
-      intervalID =  setInterval(next,6000);
+      intervalID =  setInterval(next,3000);
     else
       clearInterval(intervalID);
 }

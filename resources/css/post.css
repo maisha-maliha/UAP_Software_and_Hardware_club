@@ -12,11 +12,15 @@
 }
 h1{
     font-size: var(--mob-h3);
-    font-family: var(--vol);
+    font-family: var(--pop);
     line-height: calc(var(--mob-h3) + 10px);
     color: var(--purple);
     text-align: center;
 }
+p{
+    line-height: 30px;
+}
+
 .post .image{
     width: 100%;
     height: auto;
@@ -41,5 +45,12 @@ h1{
     h1{
         font-size: var(--h4);
         line-height: var(--h4);
+    }
+    .post h2,.post h3,.post h4,.post h5,.post h6{
+        font-size: var(--mob-h4);
+    }
+    p{
+        font-size: var(--fontsize2);
+        line-height: 30px;
     }
 }
