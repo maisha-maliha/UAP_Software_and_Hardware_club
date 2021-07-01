@@ -149,9 +149,14 @@ h1 span{
     background-color: rgb(235, 235, 235);
     margin: var(--margin);
 }
-.club-moto, .convener, .up-coming-event{
+.convener, .up-coming-event{
     display: grid;
     grid-template-columns: 1fr 2fr;
+    width: var(--content-width);
+    max-width: var(--content-width2);
+    margin: var(--margin);
+}
+.club-moto {
     width: var(--content-width);
     max-width: var(--content-width2);
     margin: var(--margin);
@@ -161,10 +166,10 @@ h1 span{
     font-weight: 700;
     color: var(--blue1);
     font-size: var(--mob-h1);
-    line-height: 90px;
+    line-height: 70px;
 }
 .club-moto h3{
-    align-self: center;
+    padding-left: 80px;
 }
 .club-moto h3 span,.convener h3 span, .up-coming-event h3 span, .university-video h3 span{
     font-size: var(--mob-h2);
@@ -249,7 +254,7 @@ h1 span{
     line-height: 60px;
     color: var(--blue1);
     /* text-align: center; */
-    margin: 20px 0;
+    margin: 20px 0 40px;
 }
 iframe{
     height: 90%;
@@ -318,6 +323,9 @@ iframe{
     }
     .club-moto, .convener, .club-para{
         grid-template-columns: 1fr;
+    }
+    .club-moto h3{
+        padding-left: 0px;
     }
     .convener-img{
         width: 100%;

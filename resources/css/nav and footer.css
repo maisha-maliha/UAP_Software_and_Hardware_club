@@ -4,6 +4,7 @@
     --vol:'Vollkorn', serif;
     --blue: #191970;
     --blue1:#0047AB;
+    /* --purple : #e02d51; */
     --purple : #DC143C;
     --grey:rgb(80, 80, 80);
     --nav_aniamtion_duartion:1s;
@@ -20,7 +21,7 @@
     --mob-h3:40px;
     --mob-h4: 25px;
     --fontsize:16px;
-    --fontsize2:20px;
+    --fontsize2:18px;
     --top-margin:100px;
 }
 
@@ -55,6 +56,7 @@
     position: fixed;
     top: 0;
     z-index: 5;
+    box-shadow: 0px 5px 65px 5px rgba(122, 122, 122, 0.432);
 }
 .nav-cover{
     display: inline;
@@ -138,8 +140,9 @@ nav ul li{
     /* float: left; */
     animation: seen;
     animation-fill-mode: forwards;
-    animation-duration: 2s;
+    animation-duration: 1.5s;
     transition-duration: 0.5s;
+    animation-delay: 0.5s;
 }
 /* nav li:nth-child(2){
     animation-delay: 0.2s;
@@ -348,7 +351,7 @@ nav ul li:hover{
         justify-self: center;
     }
     .dropbtn {
-        font-size: 25px;
+        font-size: var(--fontsize2);
     }
     .dropdown:hover .dropdown-content {
         position: initial;
