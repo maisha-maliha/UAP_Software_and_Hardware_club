@@ -1,20 +1,21 @@
 
 .post{
     width: var(--content-width);
-    max-width: var(--content-width2);
-    margin: 30px auto;
+    max-width: var(--max-with);
+    margin: 30px auto 100px;
     font-size: var(--fontsize2);
 }
 .post-info{
     width: var(--content-width);
-    max-width: var(--content-width1);
+    max-width: calc(var(--max-with) + 100px);
     margin: calc(var(--top-margin) + 20px) auto 30px;
 }
 h1{
-    font-size: var(--mob-h1);
+    font-size: var(--mob-h3);
     font-family: var(--vol);
-    line-height: 70px;
+    line-height: calc(var(--mob-h3) + 10px);
     color: var(--purple);
+    text-align: center;
 }
 .post .image{
     width: 100%;

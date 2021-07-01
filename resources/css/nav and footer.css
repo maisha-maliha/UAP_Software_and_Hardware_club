@@ -11,17 +11,18 @@
     --content-width: 90%;
     --content-width1:1200px;
     --content-width2:1000px;
+    --max-with:600px;
     --margin : 50px auto 100px;
     --h1: 110px;
     --h2:25px;
     --h3:70px;
-    --h4: 30px;
+    --h4: 25px;
     --mob-h1: 55px;
     --mob-h2:25px;
     --mob-h3:40px;
     --mob-h4: 25px;
     --fontsize:16px;
-    --fontsize2:18px;
+    --fontsize2:16px;
     --top-margin:100px;
 }
 
