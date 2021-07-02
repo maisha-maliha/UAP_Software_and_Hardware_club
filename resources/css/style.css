@@ -75,6 +75,7 @@ h1 span{
     display: block;
     font-size: var(--mob-h4);
     line-height: 45px;
+    color: var(--blue1);
 }
 
  /* 
@@ -151,10 +152,13 @@ h1 span{
 }
 .convener, .up-coming-event{
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 300px 5fr;
     width: var(--content-width);
     max-width: var(--content-width2);
     margin: var(--margin);
+}
+.up-coming-event{
+    grid-template-columns: 1fr 2fr;
 }
 .club-moto {
     width: var(--content-width);
@@ -177,9 +181,10 @@ h1 span{
     line-height: 25px;
 }
 .club-moto p{
-    color: var(--purple);
+    color: var(--grey);
     padding: 10px 30px;
     font-size: var(--fontsize2);
+    font-weight: 500px;
 }
 .convener-speech{
     padding: 0 30px;
@@ -196,8 +201,8 @@ h1 span{
     color: var(--grey);
 }
 .convener-img{
-    width: 350px;
-    height: 500px;
+    width: 300px;
+    height: 400px;
     align-self: center;
 }
 .convener-img img{

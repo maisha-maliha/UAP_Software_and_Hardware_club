@@ -1,17 +1,17 @@
-.gallary{
+.gallery{
     margin: calc(var(--top-margin) + 30px) auto 50px;
     width: var(--margin);
     width: var(--content-width);
     max-width: var(--content-width1);
 }
-.gallary h3{
+.gallery h3{
     /* transform: rotate(-90deg) translate(50px,50px); */
     color: var(--blue1);
     font-family: var(--vol);
     font-size: var(--h3);
     padding: 30px 0 0px;
 }
-.gallary h3 span{
+.gallery h3 span{
     display: block;
     font-size: var(--mob-h4);
 }
@@ -47,7 +47,7 @@
 }
 
 @media (max-width :1100px){
-    .gallary h3{
+    .gallery h3{
         font-size: var(--mob-h3);
     }
     .images{

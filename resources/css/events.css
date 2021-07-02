@@ -60,7 +60,7 @@
     }
     .info h4,.info h4 a{
         padding: 20px 0 0;
-        font-size: var(--fontsize2);
+        font-size: 23px;
         line-height: 30px;
     }
     .event-post{

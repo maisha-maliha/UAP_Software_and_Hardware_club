@@ -22,7 +22,7 @@
     --mob-h3:40px;
     --mob-h4: 25px;
     --fontsize:16px;
-    --fontsize2:16px;
+    --fontsize2:18px;
     --top-margin:100px;
 }
 
@@ -94,9 +94,12 @@
 }
 .mobile-view h2{
     display: inline;
-    color: white;
+}
+.mobile-view h2 a{
     font-size: var(--h2);
     font-family: var(--pop);
+    color: white;
+    text-decoration: none;
 }
 .burger{
     display: none;
@@ -232,7 +235,7 @@ nav ul li:hover{
 
  footer{
     width: 100%;
-    background-color: var(--blue);
+    background-color: rgb(36, 36, 36);
     position: static;
     bottom: 0;
     color:white;
@@ -255,10 +258,7 @@ nav ul li:hover{
      max-width: var(--content-width1);
      margin:50px auto;
  }
- #contact a:hover{
-     text-decoration: underline;
-     color: white;
- }
+
  #contact > div {
     padding: 0 20px;
 }
@@ -284,7 +284,8 @@ nav ul li:hover{
 }
 .social-media a, .courses a, .dev a, .useful li a{
     text-decoration: none;
-    color:var(--purple);
+    color: var(--purple);
+    font-weight: 900;
     font-size: var(--fontsize);
 }
 .useful{
