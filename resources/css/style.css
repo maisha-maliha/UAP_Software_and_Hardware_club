@@ -1,5 +1,5 @@
 
-  /* 
+  /*
  =======================================================
 
 *************   GLOABAL STYLING   **********************
@@ -10,14 +10,14 @@
 p{
     line-height: 30px;
 }
- /* 
+ /*
  =======================================================
 
 *************   LOADING STYLING   **********************
 
  =======================================================
  */
-/* 
+/*
 
  .loading{
     display: none;
@@ -54,7 +54,7 @@ p{
     z-index: -1;
 } */
 
- /* 
+ /*
  =======================================================
 
 *************   TITLE STYLING   **********************
@@ -70,6 +70,7 @@ h1{
     width: 90%;
     max-width: var(--content-width2);
     margin: 50px auto;
+    text-align: left;
 }
 h1 span{
     display: block;
@@ -78,7 +79,7 @@ h1 span{
     color: var(--blue1);
 }
 
- /* 
+ /*
  =======================================================
 
 *************   CLUB-INTO STYLING   ********************
@@ -105,7 +106,7 @@ h1 span{
     color: var(--grey);
 }
 
- /* 
+ /*
  =======================================================
 
 ***********   CLUB AND CONVENER STYLING   **************
@@ -120,30 +121,11 @@ h1 span{
     justify-self: center;
     color: var(--purple);
  }
- .club-para, .convener-para{
+.convener-para{
      display: grid;
      grid-template-columns:60px 3fr 60px;
  }
- .club-para img{
-     width: 60px;
-     height: 60px;
-     align-self: center;
-    justify-self: center;
- }
- .club-para img:nth-last-of-type(1){
-     animation-name: gearAnimation;
-     animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
- }
- .club-para img:nth-last-of-type(2){
-    animation-name: engineer;
-    animation-duration: 1.5s;
-   animation-iteration-count: infinite;
-   animation-timing-function: linear;
-   animation-fill-mode: forwards;
-}
+
  .bg-clr{
     overflow: hidden;
     width: 100%;
@@ -172,9 +154,7 @@ h1 span{
     font-size: var(--mob-h1);
     line-height: 70px;
 }
-.club-moto h3{
-    padding-left: 80px;
-}
+
 .club-moto h3 span,.convener h3 span, .up-coming-event h3 span, .university-video h3 span{
     font-size: var(--mob-h2);
     display: block;
@@ -182,7 +162,7 @@ h1 span{
 }
 .club-moto p{
     color: var(--grey);
-    padding: 10px 30px;
+    padding: 10px 0;
     font-size: var(--fontsize2);
     font-weight: 500px;
 }
@@ -213,7 +193,7 @@ h1 span{
 }
 
 
-/* 
+/*
  =======================================================
 
 **************   EVENT STYLING   ***********************
@@ -239,7 +219,7 @@ h1 span{
     font-size: 15px;
 }
 
-/* 
+/*
  =======================================================
 
 **************   video STYLING   ***********************
@@ -266,7 +246,7 @@ iframe{
     width: 100%;
 }
 
- /* 
+ /*
  =======================================================
 
 *************   ALL MEDIA STYLING   ********************
@@ -351,7 +331,7 @@ iframe{
     }
 }
 
- /* 
+ /*
  =======================================================
 
 *************   ANIMATION KEYFRAMAES STYLING   *********
