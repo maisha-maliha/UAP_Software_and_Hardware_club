@@ -1,4 +1,4 @@
-var slide = document.querySelectorAll('.img-slide');
+var slide = document.querySelectorAll('.img-slide img');
 var box = document.querySelectorAll('.box div');
 var rbtn = document.querySelector('.right-btn');
 var lbtn = document.querySelector('.left-btn');
@@ -59,7 +59,6 @@ function next() {
         slide[currentslide-1].style = 'left:0;z-index:3';
         currentslide--;
     }
-    console.log(currentslide);
     box[currentslide].style = 'background-color:#DC143C';
     intervalManager(true);
   }
@@ -94,7 +93,6 @@ box[1].addEventListener('click',()=>{
     box.forEach(element => {
         element.style = 'background-color:white'
     });
-    console.log(slide[1].style.left=='100%');
         if(slide[1].style.left=='100%'){
             slide[currentslide].style = 'left:-100%;z-index:1';
             slide[1].style = 'left:0;z-index:3';
