@@ -26,7 +26,7 @@
     --top-margin:100px;
 }
 
-  /* 
+  /*
  =======================================================
 
 *************   GLOABAL STYLING   **********************
@@ -39,11 +39,10 @@
     padding: 0;
     font-family: var(--mon);
     scroll-behavior:smooth;
-    text-align: justify;
 }
 
 
- /* 
+ /*
  =======================================================
 
 *************   NAVBAR STYLING   ***********************
@@ -187,7 +186,7 @@ nav ul li:hover{
     border: none;
     /* padding: 16px; */
   }
-  
+
   /* The container <div> - needed to position the dropdown content */
   .dropdown {
     position: relative;
@@ -204,7 +203,7 @@ nav ul li:hover{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 10;
   }
-  
+
   /* Links inside the dropdown */
   .dropdown-content a {
     z-index: 10;
@@ -213,7 +212,7 @@ nav ul li:hover{
     text-decoration: none;
     display: block;
   }
-  
+
   /* Change color of dropdown links on hover */
   .dropdown-content a:hover {
       background-color: rgb(228, 228, 228);
@@ -225,8 +224,8 @@ nav ul li:hover{
   .dropdown:hover .dropdown-content {
       display: block;
     }
-  
-/* 
+
+/*
  =======================================================
 
 *************   FOOTER STYLING   ***********************
@@ -331,7 +330,7 @@ nav ul li:hover{
     font-family: var(--pop);
     font-size: 18px;
 }
- /* 
+ /*
  =======================================================
 
 *************   ALL MEDIA STYLING   ********************
@@ -390,7 +389,7 @@ nav ul li:hover{
 }
 
 
- /* 
+ /*
  =======================================================
 
 *************   ANIMATION KEYFRAMAES STYLING   *********
@@ -416,7 +415,7 @@ nav ul li:hover{
 }
 @keyframes move {
     from{
-        
+
     }
     100%{
         top: -200vh;

@@ -52,6 +52,7 @@
 }
 .info p{
     color: grey;
+    text-align: justify;
 }
 @media (max-width:1100px){
     .notice h3{
